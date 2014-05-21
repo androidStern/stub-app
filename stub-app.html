@@ -1,0 +1,33 @@
+<head>
+  <title>stub-app</title>
+</head>
+
+<body>
+  <h1 class="stuff" value="test"><span> this is stuff </span></h1>
+  {{> hello}}
+  {{> bridge_status}}
+  {{> MESSAGES}}
+</body>
+
+<template name="hello">
+  <h1>Hello Travis!</h1>
+  {{greeting}}
+  <input id="send" class="input" type="button" value="Click" />
+</template>
+
+<template name="bridge_status">
+  <span>{{isbridge}}</span>
+</template>
+
+<template name="MESSAGES">
+  <ul>
+      {{#each messages}}
+      <li>
+        <div id="name">
+          <h1>Message: </h1>
+          {{this}}
+        </div>
+      </li>
+      {{/each}}
+  </ul>
+</template>
